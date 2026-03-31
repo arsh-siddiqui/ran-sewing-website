@@ -527,9 +527,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* --- MAP --- */
 .map-card {
+  background: var(--white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 4px solid var(--white);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+.map-iframe-container {
+  height: 450px;
+}
+.map-details {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.map-biz-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+.map-address {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.map-action .btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .map-iframe-container { height: 350px; }
+  .map-details { flex-direction: column; text-align: center; padding: 30px 20px; }
+  .map-action { width: 100%; }
 }
 
 /* --- CONTACT --- */

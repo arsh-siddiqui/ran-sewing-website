@@ -325,19 +325,43 @@
   </section>
 
   <!-- ─── MAP ──────────────────────────────────────── -->
-  <section id="map" class="section white-bg" aria-labelledby="map-title">
+  <section id="map" class="section grey-bg" aria-labelledby="map-title">
     <div class="container">
-      <h2 id="map-title" class="section-h2 text-center mb-40">Our Location</h2>
+      <div class="section-header text-center" data-aos="fade-up">
+        <p class="section-label">Find Us</p>
+        <h2 id="map-title" class="section-h2">Our Location</h2>
+      </div>
+      
       <div class="map-card shadow-lg" data-aos="fade-up">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.3!2d73.05!3d19.32!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAsmeeta+Textile+Park+Plot+No.1+Village+Kon+Bhiwandi+421311!5e0!3m2!1sen!2sin!4v1706000000000!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div class="map-iframe-container">
+          <iframe
+            src="https://www.google.com/maps?q=Asmeeta+Textile+Park+Bhiwandi&output=embed"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        
+        <div class="map-details">
+          <div class="map-info">
+            <h3 class="map-biz-name">R.A.N Sewing Machine</h3>
+            <p class="map-address">
+              Shop No. 102, 1st Floor, CFC Building, <br>
+              Asmeeta Textile Park, Plot No. 1, <br>
+              Village Kon, Bhiwandi - 421311
+            </p>
+          </div>
+          <div class="map-action">
+            <a href="https://www.google.com/maps/search/?api=1&query=Asmeeta+Textile+Park+Bhiwandi" 
+               target="_blank" 
+               class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> Open in Google Maps
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
