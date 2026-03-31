@@ -50,6 +50,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('[data-aos]');
     animatedElements.forEach(el => observer.observe(el));
 
+    // --- Stats Counting Animation ---
+    const statsSection = document.querySelector('.stats-box-section');
+    const statNums = document.querySelectorAll('.stat-num');
+    let started = false;
+
+    const countUp = () => {
+        statNums.forEach(num => {
+            const target = parseInt(num.getAttribute('data-target'));
+            let current = 0;
+            const increment = target / 50; 
+            const updateCount = () => {
+                if (current < target) {
+                    current += increment;
+                    num.innerText = Math.ceil(current);
+                    setTimeout(updateCount, 30);
+                } else {
+                    num.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !started) {
+                countUp();
+                started = true;
+            }
+        });
+    }, { threshold: 0.5 });
+
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
+
     // Active link highlighting
     const sections = document.querySelectorAll('section');
     window.addEventListener('scroll', () => {
